@@ -67,7 +67,7 @@ case "$action" in
 		fi
 
 		# Get package's name
-		pkgName=`cat "$pkgMetadataPath" | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["name"];'`
+		pkgName=`cat "$pkgMetadataPath" | python -c 'import json,sys;obj=json.load(sys.stdin);print(obj["name"]);'`
 		echo "Package's name : \"$pkgName\""
 
 		pkgFirstLetter=${pkgName:0:1}
@@ -102,7 +102,7 @@ for pkg in indexes:
 	i += 1
 if (not found):
 	indexes.append(metadata)
-print json.dumps(indexes)"
+print(json.dumps(indexes))"
 
 			json=`python -c "$pyScript"`
 
@@ -155,7 +155,7 @@ for pkg in indexes:
 		indexes.pop(i)
 	i += 1
 
-print json.dumps(indexes)"
+print(json.dumps(indexes))"
 
 			json=`python -c "$pyScript"`
 

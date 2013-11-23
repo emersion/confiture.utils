@@ -177,7 +177,7 @@ for key in newMetadata:
 	if (not key in metadata or not metadata[key] and newMetadata[key]):
 		metadata[key] = newMetadata[key]
 
-print json.dumps(metadata, indent = 4)"
+print(json.dumps(metadata, indent = 4))"
 
 	json=`python -c "$pyScript"`
 

@@ -81,7 +81,7 @@ except ValueError:
 found = False
 i = 0
 for key in files:
-	print key"
+	print(key)"
 
 	pkgFiles=( $(python -c "$pyScript") )
 fi
