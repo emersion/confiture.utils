@@ -13,8 +13,10 @@ do
 		echo "    written by $APP_AUTHOR     "
 		echo ""
 
-		echo "Usage : ./generatepkg.sh --name PKG_NAME --input PKG_SOURCE [--output OUTPUT_DIR]"
-		echo "Usage : ./generatepkg.sh -n PKG_NAME -i PKG_SOURCE [-o OUTPUT_DIR]"
+		echo "Usage : ./generatepkg.sh --name PKG_NAME [--input PKG_SOURCE] [--output OUTPUT_DIR]"
+		echo "Usage : ./generatepkg.sh -n PKG_NAME [-i PKG_SOURCE] [-o OUTPUT_DIR]"
+		echo "PKG_SOURCE: by default, current directory"
+		echo "OUTPUT_DIR: by default, PKG_SOURCE"
 		exit
 	fi
 

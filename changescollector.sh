@@ -15,8 +15,10 @@ forceYes=false
 while test $# -gt 0
 do
 	if [ "$1" = '--help' ] || [ "$1" = '-h' ] ; then
-		echo "Usage : changescollector.sh --input|-i PKG_DIR --lighp-path|-l LIGHP_PATH [--output|-o OUTPUT_DIR] [--yes]"
+		echo "Usage : changescollector.sh [--input|-i PKG_DIR] --lighp-path|-l LIGHP_PATH [--output|-o OUTPUT_DIR] [--yes]"
 		echo "Usage : changescollector.sh --git-commit|-g GIT_COMMIT --lighp-path|-l LIGHP_PATH --output|-o OUTPUT_DIR [--yes]"
+		echo "PKG_DIR: by default, current directory"
+		echo "OUTPUT_DIR: by default, PKG_DIR"
 		exit
 	fi
 

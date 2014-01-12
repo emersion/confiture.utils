@@ -16,8 +16,9 @@ do
 		echo "    written by $APP_AUTHOR           "
 		echo ""
 
-		echo "Usage : ./massctl.sh [--base-dir BASE_DIR] [--repository REPO_PATH] [--generate] [--add-to-repo]"
-		echo "Usage : ./massctl.sh [-b BASE_DIR] [-r REPO_PATH] [-G] [-A]"
+		echo "Usage : ./massctl.sh [--base-dir BASE_DIR] --repository REPO_PATH [--generate] [--add-to-repo]"
+		echo "Usage : ./massctl.sh [-b BASE_DIR] -r REPO_PATH [-G] [-A]"
+		echo "BASE_DIR: by default, current directory"
 		exit
 	fi
 

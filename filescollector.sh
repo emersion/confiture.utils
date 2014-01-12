@@ -15,6 +15,7 @@ do
 
 		echo "Usage : ./filescollector.sh --query QUERY --lighp-path LIGHP_PATH [--output OUTPUT_DIR]"
 		echo "Usage : ./filescollector.sh -q QUERY -l LIGHP_PATH [-o OUTPUT_DIR]"
+		echo "OUTPUT_DIR: by default, current directory"
 		exit
 	fi
 
