@@ -80,13 +80,12 @@ echo "Creating files list..."
 echo -n '{' > "$destDir/files.json"
 
 function listFilesInDir() {
-	for file in `ls -a "src/$1" 2>/dev/null`
-	do
+	ls -a "src/$1" 2>/dev/null | while read file; do
 		if [ "$file" = '..' ] || [ "$file" = '.' ] ; then
 			continue
 		fi
 
-		if [ -z $1 ]
+		if [ -z "$1" ]
 		then
 			filePath="$file"
 		else
