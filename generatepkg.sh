@@ -66,7 +66,9 @@ destDir=$(readlink -f "$destDir")
 tmpDir=`mktemp -d`
 
 echo "Copying package's source to \"$tmpDir/src/\"..."
-cp -R "$pkgFiles" "$tmpDir/src/"
+# The ending slash is important here: copy all files in the dir, not the whole dir
+# (otherwise creates src/src)
+rsync -a "$pkgFiles/" "$tmpDir/src" --exclude ".git"
 
 cd "$tmpDir/"
 
